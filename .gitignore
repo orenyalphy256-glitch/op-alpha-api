@@ -1,0 +1,10 @@
+venv/
+_pycache_/
+*.pyc
+.env
+.DS_Store
+.vscode/
+contact_manager.egg-info/
+dist/
+build/
+*.sqlite3
