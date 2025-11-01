@@ -1,9 +1,14 @@
 # api_db.py
 #Import necessary modules
+import os
 import sqlite3
 from flask import Flask, jsonify, request, g, abort
 
-DATABASE = "data/contacts.db"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "data")
+os.makedirs(DATA_DIR, exist_ok=True)
+
+DATABASE = os.path.join(DATA_DIR, "contacts.db")
 app = Flask(__name__)
 
 def get_db():
