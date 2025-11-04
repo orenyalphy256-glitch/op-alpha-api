@@ -3,6 +3,23 @@
 import os
 import sqlite3
 from flask import Flask, jsonify, request, g, abort
+from time import time
+
+req_times = {}
+
+def require_api_key():
+    key = request.headers.get("X-API-KEY")
+    if key != "secret123":
+        abort(401)
+
+def rate_limit(client="global", limit=6, period=60):
+    now = int(time())
+    window = now // period
+    key = f"{client}:{window}"
+    req_times.setdefault(key, 0)
+    req_times[key] += 1
+    if req_times[key] > limit:
+        abort(429, "Too many requests")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
