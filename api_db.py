@@ -34,6 +34,32 @@ def close_connection(exception):
     if db is not None:
         db.close()
 
+@app.route("/contacts/<int:contact_id>", methods=["GET"])
+def get_contact(contact_id):
+    db = get_db()
+    row = db.execute("SELECT * FROM contacts WHERE id = ?", (contact_id,)).fetchone()
+    if row is None:
+        abort(404)
+        return jsonify(dict(row))
+    
+@app.route("/contacts/<int:contact_id>", methods=["PUT"])
+def update_contact(contact_id):
+    data = request.get_json()
+    db = get_db()
+    db.execute(
+        "UPDATE contacts SET name = ?, phone = ? WHERE id = ?",
+        (data.get("name"), data.get("phone"), contact_id)
+    )
+    db.commit()
+    return jsonify({"status": "ok"})
+
+@app.route("/contacts/<int:contact_id>", methods=["DELETE"])
+def delete_contact(contact_id):
+    db = get_db()
+    db.execute("DELETE FROM contacts WHERE id = ?", (contact_id,))
+    db.commit()
+    return jsonify({"status": "deleted"})
+
 @app.route("/contacts", methods=["POST"])
 def add_contact():
     data = request.get_json()
