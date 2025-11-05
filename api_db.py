@@ -36,7 +36,7 @@ req_times = {}
 
 def require_api_key():
     key = request.headers.get("X-API-KEY")
-    if key != "secret123":
+    if key != "NotUs@2025!$":
         abort(401)
 
 def rate_limit(client="global", limit=6, period=60):
