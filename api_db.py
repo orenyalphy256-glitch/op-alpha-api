@@ -4,6 +4,33 @@ import os
 import sqlite3
 from flask import Flask, jsonify, request, g, abort
 from time import time
+import logging
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+LOG_DIR = BASE_DIR / "99-Logs"
+DATA_DIR = BASE_DIR / "data"
+DB_PATH = DATA_DIR / "contacts.db"
+
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+LOG_FILE = LOG_DIR / "api.log"
+logging.basicConfig(
+    filename=str(LOG_FILE), 
+    level=logging.INFO, 
+    format="%(asctime)s %(levelname)s %"
+    "(message)s",
+    )
+
+DATABASE = str(DB_PATH)
+
+def init_db():
+    with sqlite3.connect(DATABASE) as conn:
+        conn.execute("CREATE TABLE IF NOT EXISTS contacts (id INTEGER PRIMAY KEY, name TEXT, phone TEXT, created_at TEXT)")
+        conn.commit()
+        logging.info("Database initialized (or already exists): %s", DATABASE)
+
 
 req_times = {}
 
@@ -92,6 +119,13 @@ def add_contact():
         return jsonify({"status": "ok", "id": cursor.lastrowid}), 201
     except sqlite3.IntegrityError:
         abort(400, description="Phone already exists")
+
+logging.basicConfig(
+    filename="99-Logs/api.log", 
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(message)s"
+    )
+logging.info("API starting")
     
 
 
