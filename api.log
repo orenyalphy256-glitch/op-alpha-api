@@ -1,0 +1,105 @@
+2025-11-09 06:30:01,836 - INFO - Starting API server...
+2025-11-09 06:30:01,873 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-09 06:30:01,874 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-09 06:30:52,316 - WARNING - Unauthorized access attempt.
+2025-11-09 06:30:52,318 - INFO - 127.0.0.1 - - [09/Nov/2025 06:30:52] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-11-09 06:30:55,263 - INFO - 127.0.0.1 - - [09/Nov/2025 06:30:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-09 06:33:56,785 - INFO - Starting API server...
+2025-11-09 06:33:56,835 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-09 06:33:56,836 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-09 06:34:01,979 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\user\Documents\Alphonce_Training\03-Advanced\02-Python\api_db.py", line 122, in dashboard
+    cur = db.execute("SELECT * FROM contacts ORDER BY created_at DESC FROM contacts")
+sqlite3.OperationalError: near "FROM": syntax error
+2025-11-09 06:34:01,984 - INFO - 127.0.0.1 - - [09/Nov/2025 06:34:01] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-09 06:34:12,042 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\user\Documents\Alphonce_Training\03-Advanced\02-Python\api_db.py", line 122, in dashboard
+    cur = db.execute("SELECT * FROM contacts ORDER BY created_at DESC FROM contacts")
+sqlite3.OperationalError: near "FROM": syntax error
+2025-11-09 06:34:12,047 - INFO - 127.0.0.1 - - [09/Nov/2025 06:34:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-09 06:43:42,461 - INFO - Starting API server...
+2025-11-09 06:43:42,489 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-09 06:43:42,489 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-09 06:44:23,987 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\user\Documents\Alphonce_Training\03-Advanced\02-Python\api_db.py", line 123, in dashboard
+    cur = db.execute("SELECT * FROM contacts ORDER BY created_at DESC FROM contacts")
+sqlite3.OperationalError: near "FROM": syntax error
+2025-11-09 06:44:23,991 - INFO - 127.0.0.1 - - [09/Nov/2025 06:44:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-09 06:44:25,697 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\user\Documents\Alphonce_Training\03-Advanced\02-Python\api_db.py", line 123, in dashboard
+    cur = db.execute("SELECT * FROM contacts ORDER BY created_at DESC FROM contacts")
+sqlite3.OperationalError: near "FROM": syntax error
+2025-11-09 06:44:25,699 - INFO - 127.0.0.1 - - [09/Nov/2025 06:44:25] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-09 06:55:38,279 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\user\Documents\Alphonce_Training\03-Advanced\02-Python\api_db.py", line 123, in dashboard
+    cur = db.execute("SELECT * FROM contacts ORDER BY created_at DESC")
+sqlite3.OperationalError: near "FROM": syntax error
+2025-11-09 06:55:38,284 - INFO - 127.0.0.1 - - [09/Nov/2025 06:55:38] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-09 06:55:39,829 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\user\Documents\Alphonce_Training\03-Advanced\02-Python\api_db.py", line 123, in dashboard
+    cur = db.execute("SELECT * FROM contacts ORDER BY created_at DESC")
+sqlite3.OperationalError: near "FROM": syntax error
+2025-11-09 06:55:39,833 - INFO - 127.0.0.1 - - [09/Nov/2025 06:55:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
