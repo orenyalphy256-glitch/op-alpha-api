@@ -34,7 +34,7 @@ req_times = {}
 
 # Helpers: authentication & rate limiting
 def require_api_key():
-    expected = os.environ.get("API_KEY", "NotUs@2025!$")
+    expected = os.environ.get("API_KEY", "Correctly.1")
     api_key = request.headers.get("X-API-KEY")
     if api_key != expected:
         logging.warning("Unauthorized access attempt.")

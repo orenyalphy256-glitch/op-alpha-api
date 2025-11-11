@@ -2,7 +2,7 @@ import requests
 import argparse
 
 BASE = "http://localhost:5000"
-API_KEY = {"X-API-KEY": "NotUs@2025!$"}
+API_KEY = {"X-API-KEY": "Correctly.1"}
 
 def list_contacts():
     r = requests.get(f"{BASE}/contacts")
